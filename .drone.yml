@@ -1,0 +1,30 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: install Flask
+  image: python
+  commands:
+  - pip install Flask
+
+- name: install requestsss 
+  image: python
+  commands:
+  - pip install requests
+
+- name: testing
+  image: python
+  commands:
+  - pip install pytest
+  - python -m pytest
+
+- name: install honcho
+  image: python
+  commands:
+  - pip install -r requirements.txt
+
+- name: Start Honcho
+  image: python
+  commands:
+  - honcho start
