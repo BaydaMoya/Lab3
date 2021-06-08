@@ -18,7 +18,7 @@ steps:
   commands:
   - pip install -r requirements.txt
 
-- name: Start Honcho
+- name: install numpy
   image: python
   commands:
-  - honcho start
+  - pip install numpy
