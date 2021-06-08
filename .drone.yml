@@ -13,12 +13,6 @@ steps:
   commands:
   - pip install requests
 
-- name: testing
-  image: python
-  commands:
-  - pip install pytest
-  - python -m pytest
-
 - name: install honcho
   image: python
   commands:
